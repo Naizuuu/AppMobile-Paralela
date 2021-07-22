@@ -1,1 +1,3 @@
-"# AppMobile Paralela - Sismos" 
+# AppMobile Paralela - Sismos
+
+En desarollo...
