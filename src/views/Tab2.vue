@@ -13,7 +13,7 @@
                     <ion-title size="large">Tab 2</ion-title>
                 </ion-toolbar>
             </ion-header>
-            <ExploreContainer name="Integrantes"/>
+            <Integrantes/>
         </ion-content>
 
     </ion-page>
@@ -28,13 +28,15 @@
         IonContent 
     } from '@ionic/vue';
 
-import ExploreContainer from '@/components/ExploreContainer.vue';
+/* import ExploreContainer from '@/components/ExploreContainer.vue'; */
+import Integrantes from '@/components/Integrantes.vue';
 
     export default  {
         name: 'Tab1',
         components: 
         { 
-            ExploreContainer,
+            /* ExploreContainer, */
+            Integrantes,
             IonHeader,
             IonToolbar,
             IonTitle,
