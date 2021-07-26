@@ -80,7 +80,7 @@ http://ionicframework.com/docs/theming/ */
     /*
    * Dark Colors
    * -------------------------------------------
-   */
+   */ 
 
 body {
     --ion-color-primary: #428cff;
@@ -234,3 +234,6 @@ body {
     --ion-card-background: #1e1e1e;
     }
 }
+
+/* 
+---------------------------------------- */

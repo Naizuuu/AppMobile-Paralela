@@ -1,5 +1,3 @@
-/* NO FUNCIONANDO */
-
 <template>
     <div :class="{ loader: true, fadeout: !isLoading }">
         Loading ...

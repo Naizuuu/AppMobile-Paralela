@@ -13,7 +13,7 @@
                     <ion-title size="large">Tab 1</ion-title>
                 </ion-toolbar>
             </ion-header>
-            <ExploreContainer name="Inicio"/>
+            <CallAPI/>
         </ion-content>
 
     </ion-page>
@@ -28,13 +28,13 @@
         IonContent 
     } from '@ionic/vue';
 
-import ExploreContainer from '@/components/ExploreContainer.vue';
+import CallAPI from '@/components/CallAPI.vue';
 
     export default  {
         name: 'Tab1',
         components: 
         { 
-            ExploreContainer,
+            CallAPI,
             IonHeader,
             IonToolbar,
             IonTitle,
