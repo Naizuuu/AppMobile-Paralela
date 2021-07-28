@@ -79,11 +79,7 @@ export default defineComponent({
             .then(response => {
                 this.datos = response.data
             })
-            /* .catch(e => console.log(e)) */
         },
-        showDetails() {
-            alert('details')
-        }
     }
 });
 </script>
