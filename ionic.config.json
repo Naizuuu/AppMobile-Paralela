@@ -1,7 +1,7 @@
 {
-  "name": "SismosParalela",
-  "integrations": {
-    "capacitor": {}
-  },
-  "type": "vue"
+    "name": "SismosParalela",
+    "integrations": {
+        "capacitor": {}
+    },
+    "type": "vue"
 }

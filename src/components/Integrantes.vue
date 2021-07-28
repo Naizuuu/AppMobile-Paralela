@@ -7,8 +7,8 @@
         </ion-card-header>
 
         <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+        Estudiante ingresado el año 2016 a la carrera Ingeniería Civil en Computación mención en Informática. 
+        Actualmente cursando la asignatura de Computación Paralela y Distribuida.
         </ion-card-content>
     </ion-card>
 
@@ -20,8 +20,8 @@
         </ion-card-header>
 
         <ion-card-content>
-        Keep close to Nature's heart... and break clear away, once in awhile,
-        and climb a mountain or spend a week in the woods. Wash your spirit clean.
+        Estudiante ingresado el año 2016 a la carrera Ingeniería Civil en Computación mención en Informática. 
+        Actualmente cursando la asignatura de Computación Paralela y Distribuida.
         </ion-card-content>
     </ion-card>
 </template>

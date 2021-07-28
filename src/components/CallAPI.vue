@@ -20,7 +20,7 @@
                 </ion-label>
             </ion-item>
             <ion-item-options side="end">
-                <ion-item-option @click="unread(item)">
+                <ion-item-option @click="showDetails()">
                     <ion-icon slot="icon-only" :icon="informationCircle"></ion-icon>
                 </ion-item-option>
             </ion-item-options>
@@ -45,6 +45,9 @@ import { informationCircle } from 'ionicons/icons';
 import { defineComponent } from 'vue';
 import axios from 'axios';
 
+const siteURL  =  'https://api.jkd.cl/grupo-u/earthquakes';
+const token = '1|MHvpj3RuAJUPx1AxO37nKoXxzuBgPGnAUXRkdS0D';
+
 export default defineComponent({
     components: {
         IonItem,
@@ -57,26 +60,29 @@ export default defineComponent({
         IonIcon
     },
     setup() {
-            return {
-                informationCircle
-            }
+        return {
+            informationCircle
+        }
     },
     mounted() {
         this.getDatos();
     },
     methods: {
         getDatos() {
-            axios.get('http://127.0.0.1:8000/earthquakes', {
+            axios.get(siteURL, {
                 headers: {
-                    Authorization: 'Bearer ' + '1|JOLV9xU1YNyurXHxNR9zDapSdXl2hNpjfeOkCcHn',
+                    Authorization: 'Bearer ' + token,
                     'Content-Type' : 'application/json',
                     'Accept' : 'application/json'
                 }
             })
-                    .then(response => {
-                        this.datos = response.data
-                    })
-                    .catch(e => console.log(e))
+            .then(response => {
+                this.datos = response.data
+            })
+            /* .catch(e => console.log(e)) */
+        },
+        showDetails() {
+            alert('details')
         }
     }
 });
