@@ -1,31 +1,33 @@
 <template>
-    <!-- List of Text Items -->
-    <ion-list>
-        <ion-item>
-            <ion-label>
-                <p>Información de los últimos 15 sismos.</p>
-            </ion-label>
-        </ion-item>
-        <ion-item-sliding v-for="dato in datos" :key="dato.id">
+    <ion-router-outlet/>
+    <ion-page>
+        <ion-list>
             <ion-item>
-                <ion-thumbnail slot="start">
-                    <img src="../assets/img/earthquake.png">
-                    <div class="centrado">
-                        <strong>{{dato.magnitud}}</strong>
-                    </div>
-                </ion-thumbnail>
                 <ion-label>
-                    <h3>{{dato.georef}}</h3>
-                    <p>{{dato.fecha}}</p>
+                    <p>Información de los últimos 15 sismos.</p>
                 </ion-label>
             </ion-item>
-            <ion-item-options side="end">
-                <ion-item-option @click="showDetails()">
-                    <ion-icon slot="icon-only" :icon="informationCircle"></ion-icon>
-                </ion-item-option>
-            </ion-item-options>
-        </ion-item-sliding>
-    </ion-list>
+            <ion-item-sliding v-for="dato in datos" :key="dato.id">
+                <ion-item>
+                    <ion-thumbnail slot="start">
+                        <img src="../assets/img/earthquake.png">
+                        <div class="centrado">
+                            <strong>{{dato.magnitud}}</strong>
+                        </div>
+                    </ion-thumbnail>
+                    <ion-label>
+                        <h3>{{dato.georef}}</h3>
+                        <p>{{dato.fecha}}</p>
+                    </ion-label>
+                </ion-item>
+                <ion-item-options side="end">
+                    <ion-item-option @click="showDetails()">
+                        <ion-icon slot="icon-only" :icon="informationCircle"></ion-icon>
+                    </ion-item-option>
+                </ion-item-options>
+            </ion-item-sliding>
+        </ion-list>
+    </ion-page>
 </template>
 
 <script>
@@ -57,11 +59,16 @@ export default defineComponent({
         IonItemSliding,
         IonItemOption, 
         IonItemOptions,
-        IonIcon
+        IonIcon,
     },
     setup() {
         return {
             informationCircle
+        }
+    },
+    data() {
+        return {
+            datos:null
         }
     },
     mounted() {
